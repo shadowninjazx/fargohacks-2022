@@ -282,7 +282,7 @@ class TransactionClassifier:
                 prediction_dict[idx] = y_hat_cat
 
         # WRITE TO XLSX AND CSV
-        df = pandas.read_excel(test_csv)
+        df = pandas.read_excel(test_csv, engine='openpyxl')
 
         for item in prediction_dict:
             df.at[item,'Category']=prediction_dict[item]

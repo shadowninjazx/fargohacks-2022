@@ -12,4 +12,3 @@ seaborn
 matplotlib
 gdown
 transformers
-xlrd

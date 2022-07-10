@@ -61,7 +61,7 @@ def get_categorical_encoder(csv_file_name, categorical_variable):
         csv_file_name: training xlsx filre
         categorical_variable: name of categorical variable to encode
     '''
-    df = pandas.read_excel(csv_file_name)
+    df = pandas.read_excel(csv_file_name, engine='openpyxl')
     categorical_encoder = CategoricalEncoding(df[categorical_variable].tolist())
     return categorical_encoder
 
@@ -77,7 +77,7 @@ def load_dataset(csv_file_name, text_variables, categorical_variables=None, cate
     '''
 
     # READ XLSX
-    df = pandas.read_excel(csv_file_name)
+    df = pandas.read_excel(csv_file_name, engine='openpyxl')
     print('read', csv_file_name, 'and found', len(df), 'rows')
     print('unique categories', df["Category"].unique())
 
@@ -113,7 +113,7 @@ def plot_histogram(csv_file_name, output='count.png'):
         csv_file_name: address of xlsx
         output: output image name
     '''
-    df = pandas.read_excel(csv_file_name)
+    df = pandas.read_excel(csv_file_name, engine='openpyxl')
 
     import matplotlib.pyplot as plt
     import seaborn as sns
