@@ -1,0 +1,12 @@
+pandas
+regex
+requests
+hydra-core
+omegaconf
+bitarray
+sacrebleu
+tqdm
+openpyxl
+scikit-learn
+seaborn
+matplotlib
